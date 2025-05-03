@@ -9,7 +9,12 @@ const Navbar = () => {
     useAuth0();
   return (
     <div className="w-full h-20 px-20 bg-gray-100 flex justify-between items-center">
-      <div className="text-2xl font-semibold">TO-DO's</div>
+      <div className="text-2xl font-semibold flex items-center">
+        <img className="w-10" src="/logo.png" alt="" />
+        <p className="font-mono">
+          <span className="text-[#06d6a0]">T</span>O-DO's
+        </p>
+      </div>
       <div></div>
       <div className="flex items-center gap-x-3 relative ">
         {user ? (

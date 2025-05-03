@@ -20,7 +20,7 @@ const TaskInputContainer = () => {
   return (
     <div className="my-5 px-20">
       <form
-        className="mx-auto w-fit border border-gray-300 rounded-md overflow-hidden "
+        className="mx-auto w-fit border-t border-gray-100 rounded-md overflow-hidden shadow-lg"
         onSubmit={handleAdd}
       >
         <input

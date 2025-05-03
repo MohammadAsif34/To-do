@@ -9,16 +9,18 @@ const TaskList = () => {
 
   return (
     <div className="px-20 flex flex-col justify-center items-center">
-      <h1 className="my-3 text-3xl capitalize font-semibold">Task List</h1>
-      {JSON.stringify(todos)}
+      <h1 className="my-3 text-3xl capitalize font-semibold">
+        <span className="text-[#06d6a0]">T</span>ask List
+      </h1>
+      {/* {JSON.stringify(todos)}
       <br />
-      {typeof todos}
+      {typeof todos} */}
       {todos.length == 0 ? (
         <div className="w-68 h-48 my-12 opacity-30 transition-transform duration-500 ease-in-out">
           <img src="/noTaskImg.png" alt="" />
         </div>
       ) : (
-        <div className="w-4/5 my-4 px-4 py-2 border border-gray-300 rounded-md  transition-transform duration-500 ease-in-out">
+        <div className="w-4/5 my-4 px-4 py-2 border border-[#06d6a0] rounded-md  transition-transform duration-500 ease-in-out">
           {todos.map((todo, idx) => (
             <Task todo={todo} idx={idx} key={idx} />
           ))}
@@ -63,11 +65,11 @@ const Task = ({ todo, idx }) => {
           repudiandae delectus laborum.`}
         </p>
       </div>
-      <div
-        className="min-w-32  flex justify-around text-xl"
-        onClick={() => handleDone()}
-      >
-        <button className=" cursor-pointer">
+      <div className="min-w-32  flex justify-around text-xl">
+        <button
+          className=" cursor-pointer"
+          onClick={() => handleDone(todo._id)}
+        >
           {todo.status == "done" ? (
             <i className="bi bi-check2-circle text-green-500"></i>
           ) : (
